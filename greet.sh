@@ -1,5 +1,6 @@
 #!/bin/bash
-read -p "Enter your name: " name
+read -r -p "Enter your name: " name
+name=$(echo "$name" | xargs)
 
 if [ -z "$name" ]; then
     echo "Error: Name cannot be empty"
